@@ -1,19 +1,24 @@
+const dotenv = require("dotenv");
+dotenv.config();
+const host = process.env.HOST;
+const password = process.env.PASSWORD;
+
 export const config = {
-  "dev": {
-    "username": "",
-    "password": "",
-    "database": "",
-    "host": "",
-    "dialect": "postgres",
-    "aws_reigion": "us-east-2",
-    "aws_profile": "default",
-    "aws_media_bucket": "udagram-ruttner-dev"
+  dev: {
+    username: "udacloudevm",
+    password: password,
+    database: "udacloudevm",
+    host: host,
+    dialect: "postgres",
+    aws_region: "eu-central-1",
+    aws_profile: "default",
+    aws_media_bucket: "udagram-dev"
   },
-  "prod": {
-    "username": "",
-    "password": "",
-    "database": "udagram_prod",
-    "host": "",
-    "dialect": "postgres"
+  prod: {
+    username: "",
+    password: "",
+    database: "udagram_prod",
+    host: "",
+    dialect: "postgres"
   }
-}
+};
